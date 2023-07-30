@@ -5,7 +5,7 @@ import 'package:provider/provider.dart';
 
 class Authpage extends Page{
 
-  static final pageName = 'AuthPage';
+  static final String pageName = 'AuthPage';
 
   @override
   Route createRoute(BuildContext context) {
@@ -112,7 +112,6 @@ class _AuthWidgetState extends State<AuthWidget> {
                   TextButton(
                       onPressed: (){
                         if(_formKey.currentState!.validate()){
-                          print("모든 입력값이 올바르다.");
                           Provider.of<PageNotifier>(context, listen: false).goToMain();
                         }
                       },
