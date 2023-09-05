@@ -5,7 +5,7 @@ import 'package:mustodo/pages/did/did_page.dart';
 import 'package:mustodo/pages/destination/destination_page.dart';
 import 'package:mustodo/provider/page_notifier.dart';
 import 'package:provider/provider.dart';
-
+import 'package:mustodo/skeleton/skeleton_container.dart';
 
 class MyHomePage extends StatefulWidget {
 
@@ -53,11 +53,22 @@ class _MyHomePageState extends State<MyHomePage> {
               },
                   child: Text("Destination")
               ),
-
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: <Widget>[
+                  SkeletonContainer(width: 200, height: 50),
+                  SizedBox(height: 20),
+                  SkeletonContainer(width: 300, height: 30),
+                  SizedBox(height: 20),
+                  SkeletonContainer(width: 150, height: 70),
+                ],
+              ),
             ],
           ),
         ),
       ),
+
 
     );
   }
