@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:skeleton_text/skeleton_text.dart';
 
 class SkeletonContainer extends StatelessWidget {
   final double width;
@@ -13,12 +14,14 @@ class SkeletonContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context){
-    return Container(
-      width: width,
-      height: height,
-      decoration: BoxDecoration(
+    return SkeletonAnimation(
+      child: Container(
+        decoration: BoxDecoration(
         color: Colors.grey[300],
         borderRadius: borderRadius,
+      ),
+      width: width,
+      height: height,
       ),
     );
   }
