@@ -6,6 +6,7 @@ import 'package:mustodo/pages/destination/destination_page.dart';
 import 'package:mustodo/provider/page_notifier.dart';
 import 'package:provider/provider.dart';
 import 'package:mustodo/skeleton/skeleton_container.dart';
+import 'package:mustodo/ sidebar/menubutton.dart';
 
 class MyHomePage extends StatefulWidget {
 
@@ -35,6 +36,8 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Center(
         child: Container(
+          width: MediaQuery.of(context).size.width,
+          height: MediaQuery.of(context).size.height,
           alignment: Alignment.center,
           child: Column(
             children: [
@@ -64,11 +67,12 @@ class _MyHomePageState extends State<MyHomePage> {
                   SkeletonContainer(width: 150, height: 70),
                 ],
               ),
+              menubutton(),
+
             ],
           ),
         ),
       ),
-
 
     );
   }
